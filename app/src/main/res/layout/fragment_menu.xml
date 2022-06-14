@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/wagonsButton"
+        style="@style/myButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wagons"
+        app:layout_constraintBottom_toTopOf="@+id/fmButton"
+        app:layout_constraintEnd_toEndOf="@+id/fmButton"
+        app:layout_constraintStart_toStartOf="@+id/fmButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/fmButton"
+        style="@style/myButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/base_border"
+        android:text="@string/fm"
+        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wagonsButton" />
+
+
+    <Button
+        android:id="@+id/optionsButton"
+        style="@style/myButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fmButton"
+        app:layout_constraintStart_toStartOf="@+id/fmButton"
+        app:layout_constraintTop_toBottomOf="@+id/fmButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
