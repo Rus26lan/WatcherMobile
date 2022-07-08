@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.rundgrun.watchermobile.presentation.wagons.view.WagonView
+    <com.rundgrun.watchermobile.presentation.wagons.view.HeadWagonView
         android:id="@+id/wagonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:isStartWagon="false"
+        app:isLeadingWagon="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondWagonView"
         tools:layout_editor_absoluteX="0dp" />
@@ -43,11 +43,11 @@
         app:layout_constraintBottom_toTopOf="@+id/secondWagonView"
         app:layout_constraintTop_toBottomOf="@+id/secondWagonView3" />
 
-    <com.rundgrun.watchermobile.presentation.wagons.view.WagonView
+    <com.rundgrun.watchermobile.presentation.wagons.view.HeadWagonView
         android:id="@+id/wagonView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:isStartWagon="true"
+        app:isLeadingWagon="true"
         app:layout_constraintBottom_toTopOf="@+id/secondWagonView2"
         app:layout_constraintTop_toTopOf="parent" />
 

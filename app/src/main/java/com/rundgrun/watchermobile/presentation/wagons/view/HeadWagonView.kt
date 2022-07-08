@@ -8,17 +8,16 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.rundgrun.watchermobile.R
 import java.lang.Integer.max
-import kotlin.properties.Delegates
 
 
-class WagonView @JvmOverloads constructor(
+class HeadWagonView @JvmOverloads constructor(
     context: Context,
     attributesSet: AttributeSet? = null,
     defStyleAttr: Int = 0,
     defStileRes: Int = 0
 ) : View(context, attributesSet, defStyleAttr, defStileRes) {
 
-    private var isStartWagon = true
+    private var isLeadingWagon = true
 
     private var wlcStatus: Status = Status.UNKNOWN
     private var apStatus: Status = Status.UNKNOWN
@@ -98,11 +97,11 @@ class WagonView @JvmOverloads constructor(
     private fun initAttributes(attributesSet: AttributeSet?, defStyleAttr: Int, defStileRes: Int) {
         val typedArray = context.obtainStyledAttributes(
             attributesSet,
-            R.styleable.WagonView,
+            R.styleable.HeadWagonView,
             defStyleAttr,
             defStileRes
         )
-        isStartWagon = typedArray.getBoolean(R.styleable.WagonView_isStartWagon, true)
+        isLeadingWagon = typedArray.getBoolean(R.styleable.HeadWagonView_isLeadingWagon, true)
         typedArray.recycle()
     }
 
@@ -226,7 +225,7 @@ class WagonView @JvmOverloads constructor(
 
 
 
-        if (isStartWagon) {
+        if (isLeadingWagon) {
             wagonPath = Path().apply {
                 moveTo(wagonRect.left + ((wagonRect.right - wagonRect.left) * 0.18f), wagonRect.top)
                 lineTo(wagonRect.right, wagonRect.top)

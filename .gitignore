@@ -18,3 +18,4 @@ local.properties
 /app/src/main/assets/fm_ip/line_3_fm.json
 /app/src/main/assets/fm_ip/line_4_fm.json
 /app/src/main/assets/fm_ip/line_5_fm.json
+/domain/src/main/java/com/rundgrun/watchermobile/domain/connections/Utils.kt

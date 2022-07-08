@@ -28,11 +28,11 @@
     </style>
 
     <style name="DefaultWagonViewStyle">
-        <item name="isStartWagon">true</item>
+        <item name="isLeadingWagon">true</item>
     </style>
 
     <style name="GlobalWagonViewStyle" parent="DefaultWagonViewStyle">
-        <item name="isStartWagon">true</item>
+        <item name="isLeadingWagon">true</item>
     </style>
 
     <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">

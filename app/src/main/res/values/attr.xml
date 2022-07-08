@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="WagonView">
-        <attr name="isStartWagon" format="boolean"/>
+    <declare-styleable name="HeadWagonView">
+        <attr name="isLeadingWagon" format="boolean"/>
     </declare-styleable>
 
     <attr name="WagonViewStyle" format="reference"/>
