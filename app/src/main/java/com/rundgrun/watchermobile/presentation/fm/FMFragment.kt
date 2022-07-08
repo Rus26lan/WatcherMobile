@@ -7,6 +7,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
@@ -74,6 +75,12 @@ class FMFragment: Fragment() {
             }
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val buttonAnimation = AnimationUtils.loadAnimation(context, com.rundgrun.watchermobile.R.anim.button_anim)
+        binding.root.animation = buttonAnimation
     }
 
     override fun onDestroy() {

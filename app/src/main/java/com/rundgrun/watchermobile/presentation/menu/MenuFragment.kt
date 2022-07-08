@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
+import com.rundgrun.watchermobile.R
 import com.rundgrun.watchermobile.databinding.FragmentMenuBinding
 import com.rundgrun.watchermobile.presentation.navigator
 
@@ -27,7 +30,17 @@ class MenuFragment: Fragment() {
             navigator().toFM()
         }
 
+        binding.wagonsButton.setOnClickListener {
+            navigator().toWagons()
+        }
+
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val buttonAnimation = AnimationUtils.loadAnimation(context, R.anim.button_anim)
+        binding.root.animation = buttonAnimation
     }
 
     override fun onDestroy() {

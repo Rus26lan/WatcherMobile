@@ -9,34 +9,34 @@
         android:id="@+id/text_lines"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:text="@string/metro_line"
         app:layout_constraintBottom_toTopOf="@+id/spinner_lines"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_lines"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/spinner_lines" />
 
     <Spinner
         android:id="@+id/spinner_lines"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:foreground="@drawable/spinner_border"
-        app:layout_constraintBottom_toTopOf="@+id/text_wagons"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_wagons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_lines" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_wagons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:text="@string/wagon_number"
         app:layout_constraintBottom_toTopOf="@+id/spinner_wagons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_lines" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_wagons"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="@+id/spinner_wagons" />
 
     <Spinner
         android:id="@+id/spinner_wagons"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_wagons" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_lines" />
 
     <Button
         android:id="@+id/view_fm_level"

@@ -19,7 +19,6 @@ class FMViewModel(application: Application) : AndroidViewModel(application) {
 
 
     fun selectLineItem(numberLineItem: Int) {
-        val wagons = ArrayList<String>()
         fmIpList = when (numberLineItem) {
             0 -> {
                 fmRepository.getFMListByLines(Line.Line1)
@@ -40,11 +39,7 @@ class FMViewModel(application: Application) : AndroidViewModel(application) {
                 ArrayList()
             }
         }
-        fmIpList.forEach {
-            val name = it.name
-            wagons.add(name)
-        }
-        _wagonsListLiveData.value = wagons
+        _wagonsListLiveData.value = fmIpList.map { it.name }
     }
 
     fun selectLineWagons(selectedItem: Int) {
